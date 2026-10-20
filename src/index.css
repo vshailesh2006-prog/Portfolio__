@@ -1,0 +1,227 @@
+/* ==========================================================
+   Design System & Tokens - Shailesh Vishwakarma Portfolio
+   Theme: Premium Light Theme (Default) + Charcoal Dark Mode
+   Palette:
+     Main BG:        Warm off-white #F8FAFC
+     Card BG:        Pure white #FFFFFF
+     Primary Text:   Deep navy #172033
+     Secondary Text: Slate gray #64748B
+     Primary Accent: Indigo #4F46E5
+     Secondary Accent: Teal #0F766E
+     Borders:        Soft gray #E2E8F0
+     Section Subtle: Pale blue #EFF6FF
+   ========================================================== */
+
+:root {
+  /* Typography */
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Outfit', 'Plus Jakarta Sans', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Premium Light Theme (Default) */
+  --bg-primary: #F8FAFC;
+  --bg-secondary: #EFF6FF; /* Pale blue subtle section background */
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F8FAFC;
+  --bg-surface-elevated: #F1F5F9;
+  --bg-input: #FFFFFF;
+  --bg-glass: rgba(255, 255, 255, 0.94);
+
+  --border-subtle: #E2E8F0;
+  --border-medium: #CBD5E1;
+  --border-hover: #94A3B8;
+
+  --text-main: #172033; /* Deep navy */
+  --text-secondary: #64748B; /* Slate gray */
+  --text-muted: #94A3B8;
+  --text-inverse: #FFFFFF;
+
+  /* Primary Accent: Indigo */
+  --primary: #4F46E5;
+  --primary-hover: #4338CA;
+  --primary-subtle: #EEF2FF;
+  --primary-border: #C7D2FE;
+  --primary-border-hover: #818CF8;
+
+  /* Secondary Accent: Teal */
+  --teal: #0F766E;
+  --teal-hover: #115E59;
+  --teal-subtle: #F0FDFA;
+  --teal-border: #99F6E4;
+  --teal-badge-bg: #CCFBF1;
+
+  /* Unified alias tokens */
+  --accent: #4F46E5;
+  --accent-light: #6366F1;
+  --accent-hover: #4338CA;
+  --accent-subtle: #EEF2FF;
+  --accent-border: #C7D2FE;
+  --accent-border-hover: #818CF8;
+
+  /* Soft, clean shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -4px rgba(0, 0, 0, 0.03);
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-full: 9999px;
+
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Dark Mode Overrides (if user explicitly toggles theme) */
+[data-theme='dark'] {
+  --bg-primary: #0D0F14;
+  --bg-secondary: #131720;
+  --bg-card: #181D27;
+  --bg-card-hover: #1E2431;
+  --bg-surface-elevated: #222938;
+  --bg-input: #12151D;
+  --bg-glass: rgba(19, 23, 32, 0.90);
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.14);
+  --border-hover: rgba(255, 255, 255, 0.24);
+
+  --text-main: #F0F2F6;
+  --text-secondary: #9AA4B7;
+  --text-muted: #677286;
+  --text-inverse: #0D0F14;
+
+  --primary: #6366F1;
+  --primary-hover: #4F46E5;
+  --primary-subtle: rgba(99, 102, 241, 0.12);
+  --primary-border: rgba(99, 102, 241, 0.28);
+  --primary-border-hover: rgba(99, 102, 241, 0.45);
+
+  --teal: #14B8A6;
+  --teal-hover: #0D9488;
+  --teal-subtle: rgba(20, 184, 166, 0.12);
+  --teal-border: rgba(20, 184, 166, 0.28);
+  --teal-badge-bg: rgba(20, 184, 166, 0.18);
+
+  --accent: #6366F1;
+  --accent-light: #818CF8;
+  --accent-hover: #4F46E5;
+  --accent-subtle: rgba(99, 102, 241, 0.12);
+  --accent-border: rgba(99, 102, 241, 0.28);
+  --accent-border-hover: rgba(99, 102, 241, 0.45);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.5);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+/* Reset & Box Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  line-height: 1.65;
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+/* Typography Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 4.5vw, 3.6rem);
+}
+
+h2 {
+  font-size: clamp(1.75rem, 3.2vw, 2.35rem);
+}
+
+h3 {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+}
+
+p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  background: none;
+}
+
+input, textarea, select {
+  font-family: inherit;
+}
+
+/* Accessibility: Focus Visible */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Clean Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-medium);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
