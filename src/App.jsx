@@ -2,7 +2,6 @@ import React, { useState, useEffect, useCallback } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Toast from './components/Toast';
-import BackgroundAnimation from './components/BackgroundAnimation';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
@@ -18,7 +17,7 @@ export default function App() {
 
   // Dark/Light Theme State - Default to 'light' as requested
   const [theme, setTheme] = useState(() => {
-    return localStorage.getItem('shailesh_portfolio_theme') || 'light';
+    return localStorage.getItem('shailesh_portfolio_theme') || 'dark';
   });
 
   // Global Toast Notification State
@@ -67,9 +66,6 @@ export default function App() {
 
   return (
     <div className="app-wrapper">
-      {/* Subtle Restrained Background Depth Canvas */}
-      <BackgroundAnimation />
-
       {/* Dynamic Navigation Bar */}
       <Navbar 
         currentPage={currentPage} 
