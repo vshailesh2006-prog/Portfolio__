@@ -76,6 +76,13 @@ export default function Navbar({ currentPage, setCurrentPage, theme, toggleTheme
           <button 
             type="button"
             className="nav-link"
+            onClick={() => handleNavClick('aiml')}
+          >
+            AI / ML
+          </button>
+          <button 
+            type="button"
+            className="nav-link"
             onClick={() => handleNavClick('journey')}
           >
             Journey &amp; Activities
