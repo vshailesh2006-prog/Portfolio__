@@ -2077,3 +2077,50 @@
  .folio-bottomline span:nth-child(2) { display:none; }
 }
 @media (prefers-reduced-motion: reduce) { .folio * { transition:none!important; scroll-behavior:auto!important; } }
+
+
+/* Technical palette refinement: midnight navy, cyan and restrained violet */
+:root {
+  --folio-bg:#0a0f1a; --folio-panel:#101827; --folio-panel-2:#141f31;
+  --folio-line:#27364b; --folio-ink:#edf4ff; --folio-muted:#a3b2c8;
+  --folio-dim:#71839d; --folio-accent:#68e1f5; --folio-violet:#a5b4fc;
+  color-scheme:dark;
+}
+[data-theme='dark'] {
+  --folio-bg:#0a0f1a; --folio-panel:#101827; --folio-panel-2:#141f31;
+  --folio-line:#27364b; --folio-ink:#edf4ff; --folio-muted:#a3b2c8;
+  --folio-dim:#71839d; --folio-accent:#68e1f5; --folio-violet:#a5b4fc;
+}
+.app-wrapper { background:#0a0f1a; color:#edf4ff; }
+.bg-canvas-wrapper { display:none!important; }
+.folio { --folio-bg:#0a0f1a; --folio-panel:#101827; --folio-panel-2:#141f31; --folio-line:#27364b; --folio-ink:#edf4ff; --folio-muted:#a3b2c8; --folio-dim:#71839d; --folio-accent:#68e1f5; }
+.folio-availability { background:#101827; border-color:#27364b; }
+.folio-availability span { box-shadow:0 0 0 4px rgba(104,225,245,.1); }
+.folio-kicker,.folio-eyebrow { color:#68e1f5!important; }
+.folio-hero h1 span,.folio-contact h2 span { color:#68e1f5; }
+.folio-button-primary { background:#68e1f5; border-color:#68e1f5; color:#07121b!important; }
+.folio-button-primary:hover { background:#9aeffb; border-color:#9aeffb; }
+.folio-button-quiet { background:#101827; border-color:#2b3c53; }
+.folio-button-quiet:hover { background:#162237; border-color:#68e1f5; }
+.folio-portrait,.folio-about-card,.folio-skill-card,.folio-project-card { background:#101827; border-color:#27364b; }
+.folio-about-main,.folio-learning-panel { background:linear-gradient(135deg,#131f32 0%,#101827 78%); }
+.folio-hero-note { background:#0e1624; border-color:#27364b; }
+.folio-dsa-feature { background:#101827; border-color:#27364b; }
+.folio-dsa-stat { background:#142136; border-color:#27364b; }
+.folio-stat-rule { background:#2b3a51; }
+.folio-stat-rule span { background:#68e1f5; }
+.folio-topic-list span,.folio-project-stack span { background:#0d1522; border-color:#2a3a51; }
+.folio-proof-strip,.folio-experience-list,.folio-experience-list article,.folio-contact,.folio-bottomline { border-color:#27364b; }
+.folio-graph-only { display:block!important; max-width:900px; }
+.folio-graph-only>* { background:#101827!important; border:1px solid #27364b!important; box-shadow:none!important; width:100%; }
+.folio-graph-subtitle { margin-top:8px; font-size:12px; line-height:1.7; }
+.folio-small-tag { color:#a5b4fc; }
+.folio-skill-card>svg,.folio-project-top>svg { color:#68e1f5; }
+.folio-card-mark { color:#68e1f5; }
+.folio-inline-link,.folio-proof-link { color:#68e1f5!important; }
+.folio-experience-list article>span:first-child { color:#68e1f5; }
+.navbar-header { background:rgba(10,15,26,.94)!important; border-color:#27364b!important; backdrop-filter:blur(16px); }
+.navbar-header.scrolled { background:rgba(10,15,26,.97)!important; }
+.brand-initials { background:#68e1f5!important; color:#07121b!important; }
+.nav-link-highlight,.nav-link:hover,.mobile-highlight { color:#68e1f5!important; }
+@media(max-width:640px){.folio-graph-only{overflow:hidden}.folio-graph-subtitle{max-width:34ch}}
