@@ -2,14 +2,13 @@ import React from 'react';
 import { ArrowDownRight, ArrowRight, ArrowUpRight, BrainCircuit, Code2, Cpu, ExternalLink, Github, GraduationCap, MapPin, Terminal, Trophy, Workflow } from 'lucide-react';
 import { LeetCodeIcon, LinkedinIcon } from '../components/BrandIcons';
 import ProfileImage from '../components/ProfileImage';
-import DpVisualizer from '../components/DpVisualizer';
 import GraphVisualizer from '../components/GraphVisualizer';
 
 const leetcode = 'https://leetcode.com/u/Shailesh_1Vishwakarma/';
 const linkedin = 'https://www.linkedin.com/in/shailesh-v-a123422b8/';
 const projects = [
   { number: '01', type: 'TEAM PROJECT · SIH 2026', title: 'Drift & Destiny', text: 'A tourism and cultural discovery platform concept focused on helping travellers find meaningful places, local experiences, and useful trip information.', stack: ['React', 'Vite', 'Tailwind CSS'], href: 'https://github.com/revanntdikshit729-oss/SIH26---T15---Drift-Destiny', link: 'Explore repository', icon: MapPin },
-  { number: '02', type: 'ALGORITHM LEARNING', title: 'DP & Graph Playground', text: 'Interactive visualizers for exploring dynamic programming states and graph traversal ideas step by step.', stack: ['React', 'Algorithms', 'Visual learning'], href: '#dsa', link: 'Try the visualizers', icon: Workflow },
+  { number: '02', type: 'ALGORITHM VISUALIZATION', title: 'Graph Traversal Lab', text: 'An interactive BFS and DFS playground that makes traversal order, visited nodes, and frontier changes easier to understand.', stack: ['BFS / DFS', 'Graph theory', 'React'], href: '#dsa', link: 'Explore graph lab', icon: Workflow },
   { number: '03', type: 'ROBOTICS · IOT', title: 'Line Maze Solver', text: 'A robotics learning project exploring line-following behaviour, sensor input, and motor control with embedded hardware.', stack: ['ESP32', 'IR sensors', 'PID concepts'], href: 'https://github.com/vshailesh2006-prog', link: 'View GitHub profile', icon: Cpu }
 ];
 const skills = [
@@ -68,8 +67,8 @@ export default function HomePage() {
           <div className="folio-dsa-copy"><span className="folio-card-label">LEETCODE · C++</span><h3>Every problem teaches a pattern.</h3><p>From arrays and linked lists to trees, graphs, and dynamic programming, I’m building the habit of breaking problems down before reaching for an optimized approach.</p><div className="folio-topic-list"><span>Arrays & strings</span><span>Linked lists</span><span>Trees & graphs</span><span>Recursion</span><span>Dynamic programming</span><span>Complexity analysis</span></div><a href={leetcode} target="_blank" rel="noreferrer" className="folio-inline-link">Follow my progress <ArrowUpRight size={15} /></a></div>
           <div className="folio-dsa-stat"><span className="folio-stat-label">SOLVED</span><strong>200<span>+</span></strong><span className="folio-stat-caption">problems & counting</span><div className="folio-stat-rule"><span /></div><span className="folio-stat-foot">Consistency over shortcuts.</span></div>
         </div>
-        <div className="folio-visualizer-heading"><div><span className="folio-eyebrow">INTERACTIVE LEARNING</span><h3>See the algorithm in action.</h3></div><span className="folio-small-tag">TRY IT YOURSELF ↘</span></div>
-        <div className="algorithm-visualizers-grid folio-visualizers"><DpVisualizer /><GraphVisualizer /></div>
+        <div className="folio-visualizer-heading"><div><span className="folio-eyebrow">INTERACTIVE GRAPH LAB</span><h3>Watch traversal, step by step.</h3><p className="folio-graph-subtitle">Switch between BFS and DFS to compare how each algorithm explores the same graph.</p></div><span className="folio-small-tag">TRY IT YOURSELF ↘</span></div>
+        <div className="algorithm-visualizers-grid folio-visualizers folio-graph-only"><GraphVisualizer /></div>
       </section>
 
       <section className="folio-section" id="skills">
