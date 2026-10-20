@@ -2,7 +2,6 @@ import React, { useState, useEffect, useCallback } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Toast from './components/Toast';
-import BackgroundAnimation from './components/BackgroundAnimation';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
@@ -67,9 +66,6 @@ export default function App() {
 
   return (
     <div className="app-wrapper">
-      {/* Subtle Restrained Background Depth Canvas */}
-      <BackgroundAnimation />
-
       {/* Dynamic Navigation Bar */}
       <Navbar 
         currentPage={currentPage} 
