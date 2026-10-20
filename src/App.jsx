@@ -18,7 +18,7 @@ export default function App() {
 
   // Dark/Light Theme State - Default to 'light' as requested
   const [theme, setTheme] = useState(() => {
-    return localStorage.getItem('shailesh_portfolio_theme') || 'light';
+    return localStorage.getItem('shailesh_portfolio_theme') || 'dark';
   });
 
   // Global Toast Notification State
